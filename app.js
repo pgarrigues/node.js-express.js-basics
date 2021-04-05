@@ -1,6 +1,8 @@
-const os = require("os");
+const http = require("http");
 
-// infos about current user
-const user = os.userInfo();
+const server = http.createServer((req, res) => {
+  res.write("welcome");
+  res.end;
+});
 
-// method return the system uptime in seconds
+server.listen(2000);
